@@ -3,12 +3,12 @@ import 'package:flutter/services.dart';
 
 class Screen {
   late MediaQueryData _mediaQueryData;
-  static late double x;
-  static late double y;
+  static late double width;
+  static late double height;
   void init(BuildContext context) {
     _mediaQueryData = MediaQuery.of(context);
-    x = _mediaQueryData.size.width / 100;
-    y = _mediaQueryData.size.height / 100;
+    width = _mediaQueryData.size.width / 100;
+    height = _mediaQueryData.size.height / 100;
   }
 
   static void setPortraitOrientation() {
