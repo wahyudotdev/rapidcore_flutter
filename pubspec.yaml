@@ -1,6 +1,6 @@
 name: rapidcore_flutter
-description: A new Flutter package project.
-version: 0.0.1
+description: Core library for rapid development.
+version: 0.0.2
 homepage: https://github.com/wahyudotdev/rapidcore_flutter
 
 environment:
@@ -19,5 +19,6 @@ dev_dependencies:
   flutter_lints: ^1.0.0
   data_connection_checker:
     git: git@github.com:uSlashVlad/data_connection_checker.git
+  infinite_scroll_pagination: ^3.2.0
 
 flutter:
