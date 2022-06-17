@@ -1,45 +1,91 @@
 import 'package:equatable/equatable.dart';
 
-abstract class Failure extends Equatable {}
+abstract class Failure extends Equatable {
+  String getError();
+}
 
 class ServerFailure extends Failure {
-  static const message = 'Server failure';
+  final String? message;
+  ServerFailure({this.message});
+
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [message];
+
+  @override
+  String getError() {
+    return message ?? 'server failure';
+  }
 }
 
 class CacheFailure extends Failure {
-  static const message = 'Cache failure';
+  final String? message;
+  CacheFailure({this.message});
+
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [message];
+  @override
+  String getError() {
+    return message ?? 'cache failure';
+  }
 }
 
 class NetworkFailure extends Failure {
-  static const message = 'Network failure';
   @override
-  List<Object?> get props => [];
+  final String? message;
+  NetworkFailure({this.message});
+
+  @override
+  List<Object?> get props => [message];
+  @override
+  String getError() {
+    return message ?? 'connection failure';
+  }
 }
 
 class UserRegisterFailure extends Failure {
-  static const message = 'User registration failed';
+  final String? message;
+  UserRegisterFailure({this.message});
+
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [message];
+  @override
+  String getError() {
+    return message ?? 'registration fail';
+  }
 }
 
 class UserLoginFailure extends Failure {
-  static const message = 'Login failure';
+  final String? message;
+  UserLoginFailure({this.message});
+
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [message];
+  @override
+  String getError() {
+    return message ?? 'login fail';
+  }
 }
 
 class UserUpdateFailure extends Failure {
-  static const message = 'User data update failure';
+  final String? message;
+  UserUpdateFailure({this.message});
+
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [message];
+  @override
+  String getError() {
+    return message ?? 'user update fail';
+  }
 }
 
 class UserNotFoundFailure extends Failure {
-  static const message = 'User not found';
+  final String? message;
+  UserNotFoundFailure({this.message});
+
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [message];
+  @override
+  String getError() {
+    return message ?? 'user not found fail';
+  }
 }
