@@ -30,7 +30,6 @@ class CacheFailure extends Failure {
 }
 
 class NetworkFailure extends Failure {
-  @override
   final String? message;
   NetworkFailure({this.message});
 
